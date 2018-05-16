@@ -3,6 +3,7 @@ package actions
 import (
 	"github.com/gobuffalo/buffalo/render"
 	"github.com/gobuffalo/packr"
+	"github.com/gobuffalo/buffalo"
 )
 
 var r *render.Engine
@@ -22,6 +23,9 @@ func init() {
 			// uncomment for non-Bootstrap form helpers:
 			// "form":     plush.FormHelper,
 			// "form_for": plush.FormForHelper,
+			"isCurrentPathName" : func(current buffalo.RouteInfo, name string) bool {
+				return current.PathName == name
+			},
 		},
 	})
 }
