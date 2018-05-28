@@ -10,7 +10,7 @@ import (
 	"github.com/gobuffalo/buffalo/middleware/csrf"
 	"github.com/gobuffalo/buffalo/middleware/i18n"
 	"github.com/gobuffalo/packr"
-	"github.com/hectorrios/business_card/models"
+	"github.com/torrios/business_card/models"
 )
 
 // ENV is used to help switch settings based on where the
@@ -59,7 +59,6 @@ func App() *buffalo.App {
 		app.GET("/contact", ContactHandler)
 
 		app.GET("/routes", RoutesHandler)
-
 
 		app.ServeFiles("/", assetsBox) // serve files from the public directory
 	}

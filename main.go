@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/hectorrios/business_card/actions"
+	"github.com/torrios/business_card/actions"
 )
 
 func main() {
